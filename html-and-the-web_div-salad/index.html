@@ -1,63 +1,53 @@
 <!DOCTYPE html>
-
-<!--
-This page looks so confusing.
-It would be much better to work with semantic HTML to structure this code.
-Let's fix this mess!
-(There are hints to help you out below some elements)
--->
-
 <html lang="en">
   <head>
-    <title>HTML Basics Excercise</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Basics Excercise</title>
   </head>
-
   <body>
-    <div>
-      <header>
-        <nav id="nav">
-          <a href="#about-me">About Me</a>
-          <a href="#contact">Contact</a>
-          <a href="#skills">Skillset</a>
-        </nav>
-      </header>
-      <main>
-        <section id="about-me">
-          <div>About me</div>
-          <div>
-            Hi there! Welcome to my personal website. Here is gathered the most
-            important information about me. If you want to work with me or get
-            to know me, please don't hesitate to get in contact.
-          </div>
-          <figure>
-            <img src="https://picsum.photos/300/200" alt="Random image" />
-            <figcaption>
+    <header>
+      <h1>Jane Doe</h1>
+      <nav id="nav">
+        <a href="#about-me" title="About Me">About Me</a>
+        <a href="#contact" title="Contact">Contact</a>
+        <a href="#skills" title="Skillset">Skillset</a>
+      </nav>
+    </header>
+    <main>
+      <section id="about-me">
+        <h2>About me</h2>
+        <p>
+          Hi there! Welcome to my personal website. Here is gathered the most
+          important information about me. If you want to work with me or get to
+          know me, please don't hesitate to get in contact.
+        </p>
+        <figure>
+          <img src="https://picsum.photos/300/200" alt="Random image" />
+          <figcaption>
             A random picture, because I would like to maintain my privacy and
             let my code speak for me, instead of images.
-            </figcaption>
-          </figure>
-        </section>
+          </figcaption>
+        </figure>
+      </section>
 
-        <section id="contact">
-          <div>Contact</div>
-          <a href="https://github.com/neuefische">GitHub</a>
-          <a href="https://de.linkedin.com/">LinkedIn</a>
-          <a href="https://codesandbox.io/">CodeSandbox</a>
-        </section>
-
-        <section id="skills">
-          <div>Skillset</div>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Painting rainbows</li>
-            <li>Party</li>
-          </ul>
-        </section>
-      </main>
-    </div>
+      <section id="skills">
+        <h3>Skillset</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Painting rainbows</li>
+          <li>Party</li>
+        </ul>
+      </section>
+    </main>
+    <section id="contact">
+      <h4>Contact</h4>
+      <a href="https://github.com/neuefische" target="_blank">GitHub</a>
+      <a href="https://de.linkedin.com/" target="_blank">LinkedIn</a>
+      <a href="https://codesandbox.io/" target="_blank">CodeSandbox</a>
+    </section>
   </body>
 </html>
