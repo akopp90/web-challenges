@@ -29,6 +29,7 @@ aside {
 
 ul {
   width: max-content;
+  list-style: none;
 }
 
 li {
