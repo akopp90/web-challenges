@@ -17,7 +17,7 @@
   border: 2px dashed silver;
   overflow: hidden;
   border-radius: 8px;
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.573);
 }
 
 .animal {
@@ -33,13 +33,13 @@
   text-align: right;
 }
 .dino:hover {
-  background-color: lightgreen;
+  background-color: lightsalmon;
 }
 .giraffe {
   text-align: center;
 }
 .giraffe:hover {
-  background-color: lightsalmon;
+  background-color: lightgreen;
 }
 .crocodile:hover {
   background-color: lightblue;
