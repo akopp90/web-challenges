@@ -12,7 +12,7 @@ console.clear();
 // --v-- write your code here --v--
 const title = "willkommen";
 const content = "lorem ipsum ....";
-const likes = 0;
+let likes = 0;
 const user = "andy";
 const isReported = false;
 // --^-- write your code here --^--
@@ -28,5 +28,8 @@ console.log(content);
 console.log(likes);
 console.log(user);
 console.log(isReported);
+
+likes++;
+console.log(likes);
 
 // --^-- write your code here --^--
