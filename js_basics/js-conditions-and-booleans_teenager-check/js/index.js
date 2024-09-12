@@ -9,7 +9,7 @@ button.addEventListener("click", () => {
   const mainElement = document.querySelector('[data-js="age-output"]');
   const button = document.querySelector('[data-js="age-button"]');
   button.addEventListener("click", () => {});
-  if ((age < 13) | (age > 19)) {
+  if (age < 13 || age > 19) {
     mainElement.innerHTML = "you are not a teen.";
   } else {
     mainElement.innerHTML = "you are a teen.";
