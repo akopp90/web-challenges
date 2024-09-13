@@ -31,7 +31,7 @@ function getGreeting() {
     return "Good Afternoon";
   } else if (date >= 19 && date <= 22) {
     return "Good Evening";
-  } else if (date >= 23 && date <= 5) {
+  } else {
     return "Good Night";
   }
 }
