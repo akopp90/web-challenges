@@ -25,10 +25,15 @@
             name="name"
             aria-describedby="name"
           />
-          <label for="age-Input">Age:</label>
-          <input id="age-Input" type="text" name="age" />
-          <label for="color-Input">Color you cannot see:</label>
-          <input id="color-Input" type="color" name="color" />
+          <label for="age-Input" id="age">Age:</label>
+          <input id="age-Input" type="text" name="age" aria-describedby="age" />
+          <label for="color-Input" id="color">Color you cannot see:</label>
+          <input
+            id="color-Input"
+            type="color"
+            name="color"
+            aria-labelledby="color"
+          />
           <textarea rows="7" placeholder="Leave us a message..."></textarea>
           <button type="submit">Submit</button>
         </fieldset>
