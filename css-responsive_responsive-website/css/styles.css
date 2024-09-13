@@ -251,51 +251,33 @@ width, etc. */
 /* --- */
 /* Replace this comment with your media query. */
 /* --- */
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
+@media (min-width: 600px) {
+  /* Tablet mode */
   .card-section {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     flex-wrap: wrap;
-    gap: var(--gap);
     flex-direction: row;
+    justify-content: space-around;
   }
   .product-card {
-    justify-content: space-around;
-    align-items: center;
-    width: 45%;
-    height: 300px;
+    width: calc((100% - var(--gap)) / 2);
+    height: 30vh;
   }
+  /*  */
   .intro-text {
-    width: 45%;
+  width: calc((100% - var(--gap)) / 2);
   }
 }
+@media (min-width: 768px) {
+  /* Desktop mode */
 
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .card-section {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: var(--gap);
-    flex-direction: row;
-  }
   .product-card {
-    justify-content: space-around;
-    align-items: center;
-    width: 45%;
-    height: 350px;
+    width: calc((100% - var(--gap)) / 2);
+    height: 30vh;
   }
   .--forest {
     width: 100%;
   }
-  .--desert {
-    width: 70%;
-  }
   .intro-text {
-    width: 45%;
+    width: calc((100% - var(--gap)) / 2);
   }
 }
