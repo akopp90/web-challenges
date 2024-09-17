@@ -30,3 +30,13 @@ form.addEventListener("submit", (event) => {
   // eslint-disable-next-line no-alert
   alert("Form submitted");
 });
+tosCheckbox.addEventListener("click", () => {
+  const tosAccepted = tosCheckbox.checked;
+
+  if (!tosAccepted) {
+    showTosError();
+    return;
+  } else {
+    hideTosError();
+  }
+});
