@@ -15,7 +15,7 @@ createButton.addEventListener("click", () => {
   createArticle();
 });
 function createArticle() {
-  newArticle = document.createElement("article");
+  const newArticle = document.createElement("article");
   newArticle.classList.add("product");
   newArticle.innerHTML = `<div class="product__body">
         <div class="product__text-container">
