@@ -1,0 +1,18 @@
+{
+  "name": "js-fetch_star-wars",
+  "version": "0.0.0-unreleased",
+  "description": "Fetch Star Wars API and display Cards",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "start": "npx -y live-server@latest --port=3000",
+    "lint": "npx eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "nf": {
+    "template": "html-css-js-static"
+  },
+  "dependencies": {
+    "webpack": "^5.94.0"
+  }
+}
