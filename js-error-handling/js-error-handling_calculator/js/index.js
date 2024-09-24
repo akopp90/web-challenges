@@ -2,7 +2,7 @@ console.clear();
 
 const form = document.querySelector("form");
 const output = form.querySelector("output");
-
+const errorOutput = document.querySelector(".error");
 const operations = {
   add: (a, b) => a + b,
   subtract: (a, b) => a - b,
@@ -15,7 +15,7 @@ const operations = {
       return a / b;
     } catch (error) {
       console.error("Division error:", error.message);
-      output.innerText = "Division error: " + error.message;
+      errorOutput.innerText = "Division error: " + error.message;
       throw error;
     }
   },
@@ -23,6 +23,7 @@ const operations = {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  errorOutput.textContent = "";
   const firstNumber = Number(event.target.firstNumber.value);
   const secondNumber = Number(event.target.secondNumber.value);
   const operation = event.target.operation.value;
