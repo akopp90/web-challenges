@@ -6,7 +6,7 @@ export default function App() {
 
 function Article() {
   return (
-    <article>
+    <article className="article">
       <h2 className="article__title">Newsletter Anmeldung</h2>
       <label htmlFor="input">E-Mail</label>
       <br />
