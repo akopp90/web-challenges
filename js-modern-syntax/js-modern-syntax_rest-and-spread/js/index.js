@@ -29,10 +29,10 @@ export const [first, second, ...restOfList] = list;
 // d) Note that the optional chaining `?.` is used to prevent an error to happen.
 
 function add(...allNumbers) {
+  // console.log(...allNumbers);
   return allNumbers.reduce?.((a, b) => a + b);
 }
-
-export const sum = add(...[3, 2, 3, 2, 1, 2, 3, 4]);
+export const sum = add(3, 2, 3, 2, 1, 2, 3, 4);
 
 // EXERCISE 4
 // a) Below, the `add` function is called with an array as argument.
