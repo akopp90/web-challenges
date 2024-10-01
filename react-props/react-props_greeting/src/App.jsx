@@ -1,9 +1,9 @@
 import "./styles.css";
 
 export default function App() {
-  return <Greeting user="Andy" />;
+  return <Greeting usenamer="Andy" />;
 }
 
 function Greeting(props) {
-  return <h1>Hello {props.user}!</h1>;
+  return <h1>Hello {props.name}!</h1>;
 }
