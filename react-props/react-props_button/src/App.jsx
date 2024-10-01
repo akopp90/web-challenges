@@ -2,7 +2,9 @@ import React from "react";
 import "./styles.css";
 
 export default function App() {
-  function handleClick() {}
+  function handleClick() {
+    console.log("Button clicked");
+  }
 
   return (
     <>
