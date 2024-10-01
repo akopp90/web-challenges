@@ -4,7 +4,7 @@ import "../styles.css";
 import avatar from "../img/avatar.jpg";
 import logo from "../img/logo.jpg";
 
-const Header = ({ children }) => {
+const Header = () => {
   return (
     <>
       <header className="header">
@@ -12,8 +12,8 @@ const Header = ({ children }) => {
           <img className="round-image" src={logo} alt="logo" />
         </a>
         <Navigation>Home</Navigation>
-        <Navigation>Home</Navigation>
-        <Navigation>Home</Navigation>
+        <Navigation>About</Navigation>
+        <Navigation>Impressum</Navigation>
         <button
           type="button"
           onClick={() => console.log("I could toggle a profile!")}
