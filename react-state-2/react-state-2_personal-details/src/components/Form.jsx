@@ -23,7 +23,7 @@ export default function Form({ handleCreateUser, handleDeleteUser }) {
         type="button"
         onClick={handleDeleteUser}
       >
-        Reset
+        Delete
       </button>
     </form>
   );
