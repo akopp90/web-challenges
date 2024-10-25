@@ -2,41 +2,32 @@ import styled from "styled-components";
 import StyledButton from "@/components/Button";
 import useSWR from "swr";
 
-export default function ProductForm() {
-  const { data, isLoading, mutate } = useSWR("/api/products");
-
-  async function handleSubmit(event) {
-    event.preventDefault();
-
-    const formData = new FormData(event.target);
-    const productData = Object.fromEntries(formData);
-    const response = await fetch("/api/products", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(productData),
-    });
-    if (response.ok) {
-      mutate(); // reloads the data for "/api/jokes"
-      event.target.reset();
-    }
-  }
-
+export default function ProductForm({ onSubmit, data }) {
   return (
-    <StyledForm onSubmit={handleSubmit}>
+    <StyledForm onSubmit={onSubmit}>
       <StyledHeading>Add a new Fish</StyledHeading>
       <StyledLabel htmlFor="name">
         Name:
-        <input type="text" id="name" name="name" />
+        <input type="text" id="name" name="name" defaultValue={data?.name} />
       </StyledLabel>
       <StyledLabel htmlFor="description">
         Description:
-        <input type="text" id="description" name="description" />
+        <input
+          type="text"
+          id="description"
+          name="description"
+          defaultValue={data?.description}
+        />
       </StyledLabel>
       <StyledLabel htmlFor="price">
         Price:
-        <input type="number" id="price" name="price" min="0" />
+        <input
+          type="number"
+          id="price"
+          name="price"
+          min="0"
+          defaultValue={data?.price}
+        />
       </StyledLabel>
       <StyledLabel htmlFor="currency">
         Currency:

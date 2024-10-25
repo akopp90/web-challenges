@@ -15,14 +15,24 @@ export default async function handler(request, response) {
       const productData = request.body;
       await Product.create(productData);
 
-      response.status(200).json({ status: "success!" });
+      response.status(200).json({
+        status:
+          "<Image src={'https://http.cat/200'} width={300px} height={300px}/> success!",
+      });
       return;
     } catch (error) {
       console.error(error);
-      response.status(400).json({ error: error.message });
+      response.status(400).json({
+        error:
+          "<Image src={'https://http.cat/400'} width={300px} height={300px}/>" &
+          error.message,
+      });
       return;
     }
   }
 
-  response.status(405).json({ status: "Method not allowed." });
+  response.status(405).json({
+    status:
+      "<Image src={'https://http.cat/405'} width={300px} height={300px}/> Method not allowed.",
+  });
 }

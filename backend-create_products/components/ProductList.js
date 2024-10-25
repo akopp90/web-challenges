@@ -3,26 +3,33 @@ import StyledLink from "@/components/Link";
 import styled from "styled-components";
 
 export default function ProductList() {
-  const { data, isLoading } = useSWR("/api/products");
+  const { data, isLoading, mutate } = useSWR("/api/products");
 
-  if (isLoading) {
-    return <h1>Loading...</h1>;
-  }
-
-  if (!data) {
-    return;
+  async function handleDelete(id) {
+    const response = await fetch(`/api/products/${id}`, {
+      method: "DELETE",
+    });
+    if (response.ok) {
+      mutate();
+    }
   }
 
   return (
     <>
-      <StyledHeading>Available Fishes</StyledHeading>
-      <StyledList>
-        {data.map((product) => (
-          <li key={product._id}>
-            <StyledLink href={`/${product._id}`}>{product.name}</StyledLink>
-          </li>
-        ))}
-      </StyledList>
+      {isLoading && <h1>Loading...</h1>}
+      {!data && <h1>No products found</h1>}
+      {data && (
+        <StyledList>
+          {data.map((product) => (
+            <li key={product._id}>
+              <StyledLink href={`/${product._id}`}>{product.name}</StyledLink>
+              <StyledButton onClick={() => handleDelete(product._id)}>
+                Delete
+              </StyledButton>
+            </li>
+          ))}
+        </StyledList>
+      )}
     </>
   );
 }
@@ -38,4 +45,13 @@ const StyledList = styled.ul`
   gap: 1rem;
   justify-items: center;
   padding: 0;
+`;
+const StyledButton = styled.button`
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
 `;
