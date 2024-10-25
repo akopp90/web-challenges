@@ -22,10 +22,19 @@ export default function Product() {
       },
       body: JSON.stringify(productData),
     });
-    
+
     if (response.ok) {
       mutate(); // reloads the data for "/api/jokes"
       event.target.reset();
+    }
+  }
+  async function handleDelete(id) {
+    const response = await fetch(`/api/products/${id}`, {
+      method: "DELETE",
+    });
+    if (response.ok) {
+      mutate();
+      router.push("/");
     }
   }
 
@@ -50,9 +59,7 @@ export default function Product() {
         <StyledLink href="/">Back to all</StyledLink>
       </ProductCard>
       <br />
-      <StyledButton onClick={() => handleDelete(product._id)}>
-        Delete
-      </StyledButton>
+      <StyledButton onClick={() => handleDelete(id)}>Delete</StyledButton>
     </>
   );
 }
